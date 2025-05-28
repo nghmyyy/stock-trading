@@ -101,7 +101,7 @@ The project follows a microservices architecture with the following components:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/stocktrader-platform.git
+git clone https://github.com/nghmyyy/stock-trading
 cd stocktrader-platform
 ```
 
@@ -147,6 +147,24 @@ The project follows an agile development approach with 2-week sprints:
 - Sprint 5: Market Data Integration
 - Sprint 6+: Advanced Features & Refinement
 
+## 🙋‍♂️ My Contributions
+
+This project was originally based on a team prototype, but this version reflects my solo development effort.
+
+My primary responsibility was **designing the UI/UX and implementing the complete frontend** of the platform. Key contributions include:
+**UI Layout & Interface Design**:
+  - Designed the **overall layout framework** for the application (header, sidebar, content zones)
+  - Defined navigation flow using **React Router**
+  - Structured pages for login, dashboard, trading, and portfolio
+- Created a clean and responsive UI using **TailwindCSS**
+- Built all frontend components with **ReactJS**
+- Integrated secure login with **JWT-based authentication**
+- Developed interactive views for:
+  - User account manager
+  - Trading account manager
+- Connected with backend services via **Axios**
+- Ensured maintainability with component-based structure
+- Optimized the app using **Vite** for smooth development and deployment on **Railway**
 ## 📐 System Flows
 
 ### Order Creation Flow
@@ -193,6 +211,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-Team05 - ...
-
-⭐️ From team 05
+Maintained by Nguyen Ha My
+GitHub: https://github.com/nghmyyy
+Email: hamynguyen0401@email.com
