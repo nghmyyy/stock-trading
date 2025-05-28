@@ -1,0 +1,252 @@
+/* ===================== BỐ CỤC CHÍNH ===================== */
+.main-background {
+  position: fixed;
+  top: 100px;
+  left: 210px;
+  width: auto;
+  height: calc(100% - 100px);
+  right: 0;
+  bottom: 0;
+  background: rgba(28, 27, 26, 0.999);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 0;
+  z-index: -1;
+}
+
+.main-content-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* ===================== WALLET SECTION ===================== */
+.wallets-section {
+  flex: 1;
+  min-width: 600px;
+}
+
+/* Header */
+.wallets-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 200px;
+  padding-top: 50px;
+  h1 {
+
+  }
+}
+
+/* Wallet Item */
+.wallet-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.wallet-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0000ff;
+}
+.color-1 {
+  background-color: #ff6b6b;
+}
+.color-2 {
+  background-color: #4ecdc4;
+}
+.color-3 {
+  background-color: #ffd93d;
+}
+.color-4 {
+  background-color: #1a535c;
+}
+.color-5 {
+  background-color: #ff9f1c;
+}
+.color-6 {
+  background-color: #6a4c93;
+}
+
+.wallet-name {
+  margin-left: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.wallet-subinfo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.wallet-currency {
+  font-size: 14px;
+  color: #aaa;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.wallet-balance {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* Wallet Actions */
+.wallet-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.wallet-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background-color: #1ca443c5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Wallet Card (item trong list scroll) */
+.wallet-card {
+  min-width: 200px;
+  flex-shrink: 0;
+  background-color: #ffffff20;
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================== WALLET SCROLL ===================== */
+.wallets-scroll-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-width: 720px;
+  /*margin: auto;*/
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.wallets-list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.wallets-list::-webkit-scrollbar {
+  display: none;
+}
+
+.wallets-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  height: 45px;
+  width: 45px;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+  padding: 6px 12px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.scroll-btn.left {
+  margin-right: 10px;
+}
+
+.scroll-btn.right {
+  margin-left: 10px;
+}
+
+/* ===================== TRADE SECTION ===================== */
+.trade-section {
+  flex: 1;
+  min-width: 300px;
+  margin-left: 250px;
+  margin-top: 150px;
+}
+
+.trade-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.trade-item {
+  text-align: center;
+}
+
+.trade-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #1ca443c5;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.trade-label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+/* ===================== TẠO TÀI KHOẢN ===================== */
+.create-trading-account {
+  position: fixed;
+  bottom: 70px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.account-question {
+  color: white;
+  font-weight: 500;
+}
+
+.btn-add-account {
+  background-color: #7b61ff;
+  color: white;
+  font-size: 40px !important;
+  border-radius: 50% !important;
+  min-width: 70px !important;
+  height: 70px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+}
