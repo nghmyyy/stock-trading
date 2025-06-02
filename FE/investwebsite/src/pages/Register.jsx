@@ -15,8 +15,8 @@ const Register = () => {
     let newErrors = {};
 
     if (!formData.username.trim()) newErrors.username = "⚠ Name is required!";
-    if (!formData.email.includes("@gmail.com"))
-      newErrors.email = "⚠ Invalid Email!";
+    //sua email
+    if (!formData.email.trim()) newErrors.email = "⚠ Invalid Email!";
     if (formData.password.length < 6)
       newErrors.password = "⚠ Password must be at least 6 characters!";
 
@@ -25,14 +25,14 @@ const Register = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Ngăn form gửi đi nếu có lỗi
+    e.preventDefault(); // ngăn reload trang
     if (validate()) {
       console.log("Register user:", formData);
-      navigate("/");
+      return;
     }
     try {
       const response = await axios.post(
-        "/api/users/api/v1/auth/register", // Đã đổi URL dùng proxy
+        "/api/users/api/v1/auth/register",
         formData
       );
 
@@ -53,7 +53,9 @@ const Register = () => {
             type="text"
             placeholder="Username"
             value={formData.username}
-            onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, username: e.target.value })
+            }
           />
           {errors.username && <p className="error-text">{errors.username}</p>}
         </div>

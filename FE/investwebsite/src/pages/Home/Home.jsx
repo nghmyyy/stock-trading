@@ -6,7 +6,7 @@ import {
   DialogTitle,
 } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
-import CreateAccount from "../CreateAccount";
+import CreateAccount from "../../components/CreateAccount";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -63,7 +63,13 @@ const Home = () => {
           {/* Wallets Section - BÊN TRÁI */}
           <div className="wallets-section">
             <div className="wallets-header">
-              <h1 style={{ color: "#ffffff", marginLeft: "10px", fontWeight: "bold" }}>
+              <h1
+                style={{
+                  color: "#ffffff",
+                  marginLeft: "10px",
+                  fontWeight: "bold",
+                }}
+              >
                 Trading Accounts
               </h1>
             </div>
@@ -97,8 +103,26 @@ const Home = () => {
                         </div>
                       </div>
                       <div className="wallet-actions">
-                        <button className="wallet-btn" onClick={() => navigate(`/${account.id}/deposit/choose-payment-method`)}>Deposit</button>
-                        <button className="wallet-btn" onClick={() => navigate(`/${account.id}/withdraw/choose-payment-method`)}>Withdraw</button>
+                        <button
+                          className="wallet-btn"
+                          onClick={() =>
+                            navigate(
+                              `/${account.id}/deposit/choose-payment-method`
+                            )
+                          }
+                        >
+                          Deposit
+                        </button>
+                        <button
+                          className="wallet-btn"
+                          onClick={() =>
+                            navigate(
+                              `/${account.id}/withdraw/choose-payment-method`
+                            )
+                          }
+                        >
+                          Withdraw
+                        </button>
                       </div>
                     </div>
                   ))}
